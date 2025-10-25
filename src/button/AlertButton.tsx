@@ -5,7 +5,8 @@ export default function AlertButton({
   text: string;
   message: string;
 }) {
-  function handleClick() {
+  function handleClick(e: React.MouseEvent<HTMLButtonElement>) {
+    console.info("Button clicked", e.target);
     alert(message);
   }
 
